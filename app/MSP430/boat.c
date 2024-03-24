@@ -167,7 +167,7 @@ void boat_loop(unsigned long timestamp, double heading) {
         if (rudder > 90) rudder  = 90;
         if (rudder < -90) rudder = -90;
         // set servo angles in response to PID
-        servo1_move_to_angle(90 + rudder);              // if rudder is reversed, change + to -
+        servo1_move_to_angle(90 - rudder);              // if rudder is reversed, change + to -
         //--------------------------------------------------
         // Dual brushless motors
         // Servo1: left motor, Servo2: right motor
